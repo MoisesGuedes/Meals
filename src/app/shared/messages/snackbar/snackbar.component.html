@@ -1,0 +1,33 @@
+<div [@snack-visibility]="snackVisibility" class="body" [ngClass]="
+  {
+  'success':messageTipe == 'success',
+  'danger':messageTipe == 'danger',
+  'warning':messageTipe == 'warning',
+  'info':messageTipe == 'info'
+  }">
+  <div class="message-padding">
+    <header>
+      <i-feather (click)="close()" name="x"></i-feather>
+    </header>
+    <div class="message-container">
+      <section class="message-tipe-icon">
+        <i-feather *ngIf="messageTipe == 'success'" name="check-circle"></i-feather>
+        <i-feather *ngIf="messageTipe == 'danger'" name="x-circle"></i-feather>
+        <i-feather *ngIf="messageTipe == 'warning'" name="alert-triangle"></i-feather>
+        <i-feather *ngIf="messageTipe == 'info'" name="info"></i-feather>
+      </section>
+      <section class="message">
+        <header>
+          <h2 *ngIf="messageTipe == 'success'">Legal!</h2>
+          <h2 *ngIf="messageTipe == 'danger'">Ops!</h2>
+          <h2 *ngIf="messageTipe == 'warning'">Eita!</h2>
+          <h2 *ngIf="messageTipe == 'info'">Hmmmm...</h2>
+        </header>
+        <p>{{message}}</p>
+      </section>
+    </div>
+  </div>
+  <div *ngIf="snackVisibility =='visible'" class="message-time">
+
+  </div>
+</div>

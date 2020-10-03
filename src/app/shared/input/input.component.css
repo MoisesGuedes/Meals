@@ -1,0 +1,19 @@
+.message-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.success {
+  color: #507831;
+}
+
+.error {
+  color: var(--cor-primary);
+}
+
+.body {
+  margin-top: 20px;
+}

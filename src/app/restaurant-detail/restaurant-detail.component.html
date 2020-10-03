@@ -1,0 +1,22 @@
+<div class="body">
+  <div class="content-container">
+    <header>
+      <h1>{{restaurant?.name}}</h1>
+      <h2>{{restaurant?.about}}</h2>
+      <h3>{{restaurant?.hours}}</h3>
+      <hr>
+    </header>
+    <div class="content">
+      <div class="button-container">
+        <button *ngIf="!reviews" (click)="changeReviews()" [routerLink]="['reviews']" class="p-button-outline">Ver avaliações</button>
+        <button *ngIf="reviews" (click)="changeReviews()" routerLinkActive="detail-active" [routerLink]="['menu']" class="p-button-outline">Voltar Para Os Produtos</button>
+      </div>
+      <section>
+        <router-outlet></router-outlet>
+      </section>
+    </div>
+  </div>
+  <div class="shopping-kart-space">
+
+  </div>
+</div>

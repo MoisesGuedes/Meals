@@ -1,0 +1,22 @@
+<a [@restaurantAppeared]="restaurantState" [routerLink]="['/restaurants', restaurant.id]" class="card">
+  <div class="img">
+    <img [src]="restaurant.imagePath" />
+  </div>
+  <section>
+    <header>
+      <h3>
+        {{restaurant.name}}
+      </h3>
+      <div class="avaliation">
+        <i-feather name="star"></i-feather>
+        <p>{{ restaurant.rating }}</p>
+      </div>
+    </header>
+    <div class="detail">
+      <p>{{ restaurant.category }}</p>
+      <p>{{
+        restaurant.deliveryEstimate
+      }}</p>
+    </div>
+  </section>
+</a>

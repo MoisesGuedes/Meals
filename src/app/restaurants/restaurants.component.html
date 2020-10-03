@@ -1,0 +1,17 @@
+<div class="body">
+  <div class="container">
+    <header>
+      <div class="title">
+        <h1>Todos os restaurantes</h1>
+        <i-feather (click)="toggleSearch()" name="search"></i-feather>
+      </div>
+      <form [formGroup]="searchForm" action="">
+        <input formControlName="searchControl" #iptSearch [@toggleSearch]="searchBarState" type="text" placeholder="O que você está procurando?">
+      </form>
+    </header>
+    <section>
+      <app-restaurant [restaurant]="restaurant" *ngFor="let restaurant of restaurants"></app-restaurant>
+    </section>
+    <h2 *ngIf="restaurants?.length === 0">Não foram encontrados itens para sua busca.</h2>
+  </div>
+</div>

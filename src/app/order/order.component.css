@@ -1,0 +1,49 @@
+.body {
+  padding-top: 135px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 444px;
+  gap: 108px;
+}
+
+header {
+  display: flex;
+  height: 60px;
+}
+
+header h1 {
+  margin: auto 0;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 400;
+  opacity: 0.7;
+  margin: 20px 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+form button {
+  width: 100%;
+  margin: 20px 0;
+}
+
+@media(max-width:958px){
+  #form-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+
+  .grid-container {
+    gap: 50px;
+  }
+
+}

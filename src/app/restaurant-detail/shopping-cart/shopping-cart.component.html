@@ -1,0 +1,44 @@
+<div [@toggleSearch]="kartState" class="body-of-body">
+  <div *ngIf="kartState === 'visible'" class="body">
+    <div (click)="closeKart()" class="close">
+      <i-feather name="x-circle"></i-feather>
+    </div>
+    <header>
+      <h2>
+        Carrinho
+      </h2>
+      <button (click)="clear()" class="p-button-outline">limpar</button>
+    </header>
+    <hr>
+    <ul>
+      <li *ngFor="let item of items()" [@row]="rowState">
+        <div class="item-list-container">
+          <p class="product-name">
+            ({{item.quantity}}x) {{item.menuItem.name}}
+          </p>
+          <div>
+            <p>
+              {{item.value() | currency: 'BRL': 'symbol'}}
+            </p>
+            <i-feather (click)="removeItem(item)" name="x"></i-feather>
+          </div>
+        </div>
+        <hr>
+      </li>
+      <li>
+        <div class="item-list-container">
+          <p class="product-name">
+            Total
+          </p>
+          <p>
+            {{total() | currency: 'BRL': 'symbol'}}
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <footer *ngIf="kartState === 'visible'">
+    <hr>
+    <button [ngClass]="{'disabled':shoppingCartService.items.length === 0 }" [routerLink]="['/order']" [disabled]="shoppingCartService.items.length === 0" class="p-button">finalizar pedido</button>
+  </footer>
+</div>

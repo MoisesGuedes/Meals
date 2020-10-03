@@ -1,0 +1,46 @@
+section {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 48.8%;
+  background-color: white;
+  border-radius: 5px;
+}
+
+header {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header img {
+  width: 40px;
+  height: 40px;
+  margin: auto;
+}
+
+header .apresentation {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+}
+
+header .apresentation div {
+  display: flex;
+}
+
+header .apresentation div section {
+  margin: auto;
+}
+
+header .rating {
+  display: flex;
+  align-items: center;
+  gap:5px;
+}
+
+.card .body {
+  padding: 10px;
+}

@@ -1,0 +1,25 @@
+
+  <div class="item-list-container">
+    <div>
+      <div [@quantity]="rowState" *ngIf="edit" class="change-quantity">
+        <i-feather (click)="emitDecreaseQty()" name="minus"></i-feather>
+        <p class="quantity">{{item.quantity}}</p>
+        <i-feather (click)="emitIncreaseQty()" name="plus"></i-feather>
+      </div>
+      <p class="product-name">
+        <b *ngIf="!edit">({{item.quantity}}x)</b> {{item.menuItem.name}}
+      </p>
+    </div>
+    <div>
+      <p>{{item.value() | currency: 'BRL': 'symbol'}}</p>
+      <i-feather *ngIf="!edit" (click)="emitRemove()" class="danger" name="x"></i-feather>
+    </div>
+  </div>
+  <footer [@quantity]="rowState">
+    <p *ngIf="!edit" (click)="changeEdit()">Editar</p>
+    <div>
+      <button *ngIf="edit" (click)="changeEdit()" class="p-button">Confirmar</button>
+      <button (click)="emitRemove()" *ngIf="edit" class="s-button">Remover</button>
+    </div>
+  </footer>
+

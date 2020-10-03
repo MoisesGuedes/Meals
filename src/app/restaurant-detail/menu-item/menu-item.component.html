@@ -1,0 +1,15 @@
+<div [@menuItemAppeared]="menuItemState" class="card">
+  <div class="img">
+    <img [src]="menuItem.imagePath" />
+  </div>
+  <section>
+    <header>
+      <h3>{{menuItem.name}}</h3>
+    </header>
+      <p>
+        {{menuItem.description}}
+      </p>
+      <p>{{menuItem.price | currency: 'BRL': 'symbol'}}</p>
+  </section>
+  <button (click)="emitAddEvent()">+</button>
+</div>

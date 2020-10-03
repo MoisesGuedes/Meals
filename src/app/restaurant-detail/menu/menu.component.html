@@ -1,0 +1,14 @@
+<div class="menu-container">
+  <header>
+    <div (click)="openKart()" class="kart-container">
+      <div *ngIf="shoppingCartLength() > 0" class="kart-length">
+        <p>{{shoppingCartLength()}}</p>
+      </div>
+      <i-feather name="shopping-cart"></i-feather>
+    </div>
+  </header>
+  <app-menu-item *ngFor="let item of menu | async" [menuItem]="item" (add)="shoppingCart.addItem($event)"></app-menu-item>
+</div>
+<div>
+  <app-shopping-cart #shoppingCart [event]="eventSubject.asObservable()"></app-shopping-cart>
+</div>

@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "meals"
+    }
+  },
+  "defaultProject": "meals",
+  "cli": {
+    "analytics": false
+  }
 }

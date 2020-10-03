@@ -1,0 +1,25 @@
+<header [ngClass]="{ 'light': headerStyleService.headerLightStyle}">
+  <nav>
+    <ul class="container">
+      <li (click)="setHeaderStyleFalse()" [routerLink]="['/']" class="logo">
+        <h2>MEALS</h2>
+      </li>
+      <li [routerLink]="['/restaurants']" (click)="setHeaderStyleTrue()" class="link">
+        <div class="border-top"></div>
+        <a>Restaurantes</a>
+        <div class="border-botton"></div>
+      </li>
+      <li class="link">
+        <div class="border-top"></div>
+        <a>Sobre</a>
+        <div class="border-botton"></div>
+      </li>
+      <li>
+        <button *ngIf="isLoggedIn(); else notLoggedin" (click)="logout()">Sair</button>
+        <ng-template #notLoggedin>
+          <button (click)="login()">login</button>
+        </ng-template>
+      </li>
+    </ul>
+  </nav>
+</header>

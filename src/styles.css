@@ -1,1 +1,145 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #F9F9F9;
+  -webkit-font-smoothing: antialiased;
+  --cor-primary:#EB5F57;
+  --cor-secondary:#F1F0F8;
+  --cor-button-text:white;
+  color: #3E3E3E;
+}
+
+body, input, button {
+  font-family: Roboto, sans-serif;
+}
+
+.p-button{
+  height: 45px;
+  background-color: var(--cor-primary);
+  color: var(--cor-button-text);
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 5px;
+  padding: 0 20px;
+  transition: 0.3s;
+}
+
+
+.p-button:hover {
+  transition: 0.3s;
+  background-color: #E85047;
+}
+
+.s-button{
+  height: 45px;
+  background-color: #F1F0F8;
+  color: #3E3E3E;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 5px;
+  padding: 0 20px;
+}
+
+.p-button-outline{
+  height: 45px;
+  background-color: transparent;
+  color: var(--cor-primary);
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 5px;
+  border: 2px solid var(--cor-primary);
+  padding: 0 20px;
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+.p-button-outline:hover{
+  background-color: var(--cor-primary);
+  color: white;
+  transition: 0.7s;
+}
+
+.disabled{
+  opacity: 0.5;
+  cursor: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1{
+  font-size: 30px;
+  font-weight: bold;
+}
+hr {
+  opacity: 0.1;
+}
+
+input {
+  height: 40px;
+  background-color: white;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #D6D6D6;
+  font-size: 16px;
+  padding-left: 20px;
+  color: #3E3E3E;
+  transition: 0.7s;
+}
+
+input:focus{
+  border: 1px solid #3E3E3E;
+  transition: 0.7s;
+}
+
+select {
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #D6D6D6;
+  background-color: white;
+  border-radius: 5px;
+  color: #3E3E3E;
+  font-size: 16px;
+  transition: 0.7s;
+  width: 100%;
+  padding-left: 16px;
+}
+select option {
+  margin: 10px 0;
+}
+
+.container {
+  width: 1440px;
+  margin: auto;
+  padding: 10px;
+}
+
+@media(max-width:1440px){
+  .container {
+    width: 1088px;
+    margin: auto;
+    padding: 10px;
+  }
+}
+@media(max-width:958px){
+  .container {
+    width: 900px;
+    margin: auto;
+    padding: 10px;
+  }
+}

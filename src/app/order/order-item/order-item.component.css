@@ -1,0 +1,97 @@
+section {
+  margin: auto 0;
+}
+
+.item-list-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 17px;
+}
+
+.change-quantity {
+  margin-right: 10px;
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.change-quantity i-feather:nth-child(1){
+  color: var(--cor-primary);
+}
+
+.change-quantity i-feather:nth-child(2){
+  color: #507831;
+}
+
+.item-list-container .product-name {
+  font-weight: 700;
+}
+
+.item-list-container div {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+
+}
+
+footer p {
+  color: var(--cor-primary);
+  cursor: pointer;
+}
+
+.danger {
+  color: var(--cor-primary);
+}
+
+i-feather {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+  /* opacity: 1;
+  /* margin-right: -30px;
+  animation: showButtons 2s forwards; */
+}
+
+@keyframes showButtons {
+  to {
+    margin-right: 0px;
+  }
+}
+
+
+footer p {
+  margin-right: auto;
+}
+
+footer .p-button {
+  width: 100px;
+  height: 30px;
+  text-transform: capitalize;
+  font-size: 15px;
+  padding: 0;
+  cursor: pointer;
+}
+
+footer .s-button {
+  width: 100px;
+  height: 30px;
+  text-transform: capitalize;
+  font-size: 15px;
+  padding: 0;
+  cursor: pointer;
+}

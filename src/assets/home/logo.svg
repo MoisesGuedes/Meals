@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="381.035" height="113" viewBox="0 0 381.035 113">
+  <g id="logo" transform="translate(-150.567 -185)">
+    <g id="Grupo_53" data-name="Grupo 53" transform="translate(73 -21.11)">
+      <g id="Grupo_68" data-name="Grupo 68">
+        <path id="Caminho_1" data-name="Caminho 1" d="M12.042-21.851c5.8,0,9.189,10,9.438,18.682S16.3,21,10.5,21A10.5,10.5,0,0,1,0,10.5C0,8.209,1.934,6.435,5.426-.627S8.534-21.851,12.042-21.851Z" transform="translate(448.102 275.549) rotate(-150)" fill="#3e3e3e"/>
+        <path id="Caminho_2" data-name="Caminho 2" d="M8.022-21.851c3.863,0,6.121,6.659,6.288,12.446S10.858,6.7,7,6.7a7,7,0,0,1-7-7C0-1.825,1.288-3.007,3.614-7.712S5.685-21.851,8.022-21.851Z" transform="translate(445.073 244.667) rotate(-146)" fill="#eb5f57"/>
+        <path id="Caminho_1-2" data-name="Caminho 1" d="M12.042,42.851c5.8,0,9.189-10,9.438-18.682S16.3,0,10.5,0A10.5,10.5,0,0,0,0,10.5c0,2.291,1.934,4.065,5.426,11.127S8.534,42.851,12.042,42.851Z" transform="translate(77.567 257.363) rotate(-30)" fill="#3e3e3e"/>
+        <path id="Caminho_2-2" data-name="Caminho 2" d="M8.022,28.547c3.863,0,6.121-6.659,6.288-12.446S10.858,0,7,0A7,7,0,0,0,0,7C0,8.521,1.288,9.7,3.614,14.408S5.685,28.547,8.022,28.547Z" transform="translate(87.35 239.115) rotate(-34)" fill="#eb5f57"/>
+      </g>
+    </g>
+    <text id="MEALS" transform="translate(210 275)" fill="#3e3e3e" font-size="100" font-family="Bauhaus93, 'Bauhaus 93'"><tspan x="0" y="0">MEALS</tspan></text>
+  </g>
+</svg>

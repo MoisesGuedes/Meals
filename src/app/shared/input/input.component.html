@@ -1,0 +1,14 @@
+<div class="body">
+  <ng-content></ng-content>
+
+  <div *ngIf="showTip && hasSuccess()" class="message-container success">
+    <i-feather name="check"></i-feather>
+    <span>Ok</span>
+  </div>
+
+  <div *ngIf="showTip && hasError()" class="message-container error">
+    <i-feather name="x"></i-feather>
+    <span>{{errorMessage}}</span>
+  </div>
+
+</div>

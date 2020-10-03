@@ -1,0 +1,56 @@
+.body {
+  margin-top: 63px;
+  padding: 45px 30px;
+  width: 100%;
+  height: 515px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+a {
+  color: var(--cor-primary);
+}
+
+header h3 {
+  font-size: 20px;
+  opacity: 0.7;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  display: flex;
+  flex-direction: column;
+  height: 83px;
+}
+
+ul li section {
+  margin: 10px 0;
+}
+
+.coast-container {
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.coast-container .coast-name {
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+footer {
+  margin-top: auto;
+}

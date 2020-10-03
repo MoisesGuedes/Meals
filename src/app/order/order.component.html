@@ -1,0 +1,81 @@
+<div class="body">
+  <div class="container">
+    <header>
+      <h1>Finalize o seu pedido</h1>
+    </header>
+    <hr>
+    <div class="grid-container">
+      <form [formGroup]="orderForm" submit novalidate>
+        <section>
+          <h3>
+            Seus Dados:
+          </h3>
+
+          <div>
+            {{emailsNotMatch()}}
+          </div>
+
+          <app-input errorMessage="Campo obrigatório e com 5 caracteres">
+            <input formControlName="name" autocomplete="off" placeholder="Nome">
+          </app-input>
+
+          <div id="form-grid" class="form-grid">
+            <app-input errorMessage="E-mail invalido">
+              <input formControlName="email" autocomplete="off" placeholder="E-mail">
+            </app-input>
+
+            <app-input errorMessage="E-mail invalido">
+              <input formControlName="emailConfirmation" autocomplete="off" placeholder="Confirmação">
+            </app-input>
+          </div>
+
+        </section>
+        <section>
+          <h3>
+            Endereço de Entrega:
+          </h3>
+
+          <app-input errorMessage="Campo obrigatório e com 5 caracteres">
+            <input formControlName="address" autocomplete="off" placeholder="Endereço">
+          </app-input>
+
+          <div class="form-grid">
+            <app-input>
+              <input formControlName="optionalAddress" placeholder="Complemento">
+            </app-input>
+
+            <app-input errorMessage="Obrigatório e somente números">
+              <input formControlName="number" placeholder="Número" placeholder="Número">
+            </app-input>
+          </div>
+
+        </section>
+        <section>
+          <h3>
+            Formas de Pagamento:
+          </h3>
+          <div id="form-grid" class="form-grid">
+            <select formControlName="paymentOptions">
+              <option value="MON">Dinheiro</option>
+              <option value="DEB">Cartão de Débito</option>
+              <option value="REF">Cartão Refeição</option>
+            </select>
+          </div>
+        </section>
+
+        <button [ngClass]="{'disabled':!orderForm.valid || cartItems().length === 0 }" (click)="checkOrder(orderForm.value)" [disabled]="!orderForm.valid || cartItems().length === 0" type="submit" class="p-button">concluir pedido</button>
+
+      </form>
+      <div class="order-items">
+        <app-order-items
+        [items]="cartItems()"
+        (increaseQty)="increaseQty($event)"
+        (decreaseQty)="decreaseQty($event)"
+        (remove)="remove($event)"
+        [itemsValues]="itemsValues()"
+        [deliveryValue]="delivery"
+        ></app-order-items>
+      </div>
+    </div>
+  </div>
+</div>

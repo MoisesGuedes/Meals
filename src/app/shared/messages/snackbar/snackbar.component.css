@@ -1,0 +1,97 @@
+.body {
+  min-width: 350px;
+  max-width: 350px;
+  margin-left: -125px;
+  color: #fff;
+  border-radius: 5px;
+  position: fixed;
+  z-index: 5000;
+  left: 50%;
+  bottom: 30px;
+  /* animation: showToast 0.5s forwards; */
+  /* animation: desapier 0.5s forwards 5s; */
+}
+
+.success {
+  background-color: #43D787;
+}
+.danger {
+  background-color: var(--cor-primary);
+}
+.warning {
+  background-color: #FFBB00;
+}
+.info {
+  background-color: #0086D6;
+}
+
+@keyframes showToast {
+  to{
+    bottom: 30px;
+  }
+}
+
+@keyframes desapier {
+  to{
+    bottom: -300px;
+  }
+}
+
+.message-padding {
+  padding: 5px 15px;
+}
+
+.body header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: -5px;
+}
+
+.body header i-feather {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.message-container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 10px;
+}
+
+.message-container .message header{
+  justify-content: start;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+.message-container .message header h2 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.message-container .message-tipe-icon i-feather{
+  width: 35px;
+  height: 35px;
+}
+
+.message-time {
+  margin-top: 10px;
+  width: 0%;
+  height: 10px;
+  background-color: white;
+  opacity: 0.5;
+  animation: toastTime 5s forwards;
+}
+
+.message p {
+  font-size: 14px;
+}
+
+@keyframes toastTime {
+  to {
+    width: 100%;
+  }
+}

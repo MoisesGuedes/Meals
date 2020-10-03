@@ -1,0 +1,21 @@
+<div class="body">
+  <div class="container">
+    <div class="content">
+      <img src="assets/home/logo.svg" alt="logo">
+      <div class="card">
+        <h2>Por favor, efetue o login para continuar</h2>
+        <section>
+          <form [formGroup]="loginForm">
+            <app-input [showTip]='false'>
+              <input type="text" formControlName='email' placeholder="E-mail">
+            </app-input>
+            <app-input [showTip]='false'>
+              <input type="password" formControlName='password' placeholder="Password">
+            </app-input>
+            <button (click)="login()" class="p-button">Entrar</button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

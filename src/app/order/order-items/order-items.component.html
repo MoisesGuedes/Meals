@@ -1,0 +1,41 @@
+<div class="body">
+  <header>
+    <h3>Itens do Pedido:</h3>
+  </header>
+  <hr>
+
+  <p *ngIf="items.length === 0; else itemsList">Não há itens no seu carrinho. Que tal começar por <a [routerLink]="['/restaurants']">aqui</a></p>
+  <ng-template #itemsList>
+    <ul>
+      <li *ngFor="let item of items">
+        <section>
+          <app-order-item
+          [item]="item"
+          (increaseQty)="emitIncreaseQty($event)"
+          (decreaseQty)="emitDecreaseQty($event)"
+          (remove)="emitRemove($event)"
+          >
+        </app-order-item>
+        </section>
+        <hr>
+      </li>
+    </ul>
+  </ng-template>
+
+  <footer>
+    <div class="coast-container">
+      <p class="coast-name">Itens:</p>
+      <p class="price">{{itemsValues | currency: 'BRL': 'symbol'}}</p>
+    </div>
+    <div class="coast-container">
+      <p class="coast-name">Frete:</p>
+      <p class="price">{{deliveryValue | currency: 'BRL': 'symbol'}}</p>
+    </div>
+    <hr>
+    <div class="coast-container">
+      <p class="coast-name">Total:</p>
+      <p class="price">{{orderTotal() | currency: 'BRL': 'symbol'}}</p>
+    </div>
+  </footer>
+
+</div>
